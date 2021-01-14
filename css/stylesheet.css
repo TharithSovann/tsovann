@@ -1,0 +1,135 @@
+/*
+Tharith Sovann
+University of Massachusetts Lowell
+Email: tharith_sovann@student.uml.edu
+Class: COMP.4610-201 GUI Programming I HW2
+Filename: /~tsovann/index.html
+This website was created for assignment 2 which
+contain links to later assignments in the class.
+Created on 09/21/2020
+*/
+
+* {/*Keeps the banner covering the top and the grid margin the same */
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {/*The background color that can be seen through the grid gap and margin*/
+  background-color: #1f2923;
+}
+
+.header{/*Edits and aligns the text and position the banner in the middle*/
+  font: normal 72px "Times New Roman";
+  color: #fff;
+  text-shadow: 4px 4px 10px black;
+  text-align: center;
+  margin: 0%;
+  padding: 4%;
+  background: url("../pics/banner_cropped.png") no-repeat center;
+  background-size: cover;
+  border:#333 1px solid;
+}
+
+.grid {
+  /* positions first grid box on the left for the
+  assignments and text about the website on the right.
+  I learned this from the assigned videos made by Traversy Media*/
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  word-wrap: break-word;/*prevents letters/words spilling out of grid*/
+}
+
+.grid > div {
+  /* for every div in the grid, make the background color #d1feff
+  and give it some padding to give the contents some spacings*/
+  background: #d1feff;
+  padding:1em;
+}
+
+.nested {/* this contains the assignment nested grids, it keeps the text in
+  the center and make the grid boxes look like buttons. Learned from
+  Traversy Media.*/
+  justify-content: center;
+  text-align: center;
+  border:#333 1px solid;
+  text-decoration: none;
+  background: #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {/* specifies the transition speed when you hover over the button.
+       Learned from W3Schools.*/
+  background: white;
+  margin: 0px;
+  transition: 0.1s;
+}
+
+.box:hover{/* this makes the button 5% bigger when hovered over and turn the
+  same color of thebackground. Learned from W3Schools.*/
+  transform: scale(1.05);
+  background: #d1feff;
+}
+
+.nested > div {/* gives the grid boxes black borders to contrast from background color*/
+  border:#333 1px solid
+}
+
+.nested a {/*makes all the texts in selectors of a, like link and visited, be
+  black and get rid of the underline */
+  text-decoration: none;
+  color: black;
+}
+
+.about_website {/*increases font size to fit the space on the right of assignments*/
+  font: normal 35px "Times New Roman";
+  border:#333 1px solid;
+  margin-right: 17px;
+}
+
+.about_me {/*makes this third grid box stretch from left all the way to right. 
+            Learned from assigned video made by Traversy Media.*/
+  border:#333 1px solid;
+  grid-column: 1/4;
+  margin-right: 33px;
+}
+.nested_images {/*also make this grid box stretch from left to right and hold a
+  nest of 4 images, dividing into four equal columns. Learned from Traversy Media.*/
+  border:#333 1px solid;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-right: 33px;
+  border:#333 1px solid;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nested_images > p {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+img {/*makes all images (img) have a width of 90% of its original dimension
+  and having the height as auto will make it adjust as the window size changes*/
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+}
+
+footer {/*I included the validator links with the footer so I gave it a flex
+  display and aligned everything in the center to have it all in a row*/
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  color: white;
+}
+
